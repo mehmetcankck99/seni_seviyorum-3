@@ -79,7 +79,7 @@ const timelineData = [
     { title: "Sessiz Doğrularımız", date: "6. Ay", text: "Hiç konuşmadan, sadece gözlerine bakarak aynı şeyi hissettiğimiz, birbirimizi en iyi anladığımız o sıcacık anlar.", img: "month_6.jpeg" },
     { title: "Her Şeyim Oldun", date: "7. Ay", text: "Hayatı seninle paylaşmanın ne kadar eşsiz bir hediye olduğunu kalbime usulca kazıdığım günler.", img: "month_7.jpeg" },
     { title: "Gölgem ve Güneşim", date: "8. Ay", text: "Bazen gölgemde sığındığım serinliğim, bazen de sabahımı aydınlatan en güzel güneşim oldun.", img: "month_8.jpeg" },
-    { title: "Ellerin Elimde", date: "9. Ay", text: "Ellerini tuttuğumda dünyadaki bütün fırtınalardan korunduğumu sandığım, o güven dolu eşsiz hatıralar.", img: "month_9.jpeg" },
+    { title: "Köftük", date: "9. Ay", text: "Burada fotoğrafımız yok çünkü askerdeydim o aya en güzel fotoğraf köftükü buldum oda bizim aşkımız sayılır.", img: "month_9.jpeg" },
     { title: "Sonsuz Gelen Huzur", date: "10. Ay", text: "Artık sensiz bir gelecek hayal bile edemeyecek kadar kanıma, canıma, ruhuma işlemiş bir parçam olmuştun.", img: "month_10.jpeg" },
     { title: "Omzundaki Evim", date: "11. Ay", text: "Göğsüne yaslandığımda, dünyadaki hiçbir derdin bizi yıkamayacağına inandığım en güçlü zamanlarımız.", img: "month_11.jpeg" },
     { title: "Bir Bütün Yılımız", date: "12. Ay", text: "Zamanın seninle ne kadar muazzam geçtiğinin ispatı. Omuz omuza, kalp kalbe devirdiğimiz koca bir yıl.", img: "month_12.jpeg" },
