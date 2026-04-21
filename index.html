@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bizim Hikayemiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Background Canvas for Stars -->
+    <canvas id="starsCanvas"></canvas>
+
+    <!-- Audio Element (Hidden) -->
+    <!-- Not: Kullanıcı kendi "6.18.18" şarkısını mp3 olarak ekleyebilir -->
+    <audio id="bgMusic" loop>
+        <!-- Kullanıcı assets klasörüne 6.18.18.mp3'ü eklediğinde burası çalışacak. Şimdilik dış bir enstrümantal veya boş bırakabiliriz. -->
+        <source src="assets/music.mp3" type="audio/mpeg">
+        Tarayıcınız ses elemanını desteklemiyor.
+    </audio>
+
+    <header class="hero">
+        <!-- Lise fotoğraflarının arka planda saçılması için container -->
+        <div class="scattered-photos" id="scatteredPhotos"></div>
+
+        <div class="hero-content">
+            <h1 class="fade-in-up">Seninle Başlayan Hikayemiz</h1>
+            <p class="subtitle fade-in-up delay-1">Seninle başlayan, her şeye rağmen devam eden en güzel hikayem...</p>
+            <button id="playBtn" class="play-btn fade-in-up delay-2">
+                <span class="icon"></span> Hadi seninle bir zaman yolculuğuna çıkalım.
+            </button>
+            <p class="scroll-hint fade-in-up delay-3">Aşağı Kaydır <span class="arrow">↓</span></p>
+        </div>
+    </header>
+
+    <main class="timeline-container" id="timelineContainer">
+        <!-- JS tarafından otomatik doldurulacak -->
+    </main>
+
+    <footer class="footer">
+        <p>Tüm kalbimle...</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
