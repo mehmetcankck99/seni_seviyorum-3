@@ -114,8 +114,9 @@ h1, h2, h3 {
 .scroll-hint {
     position: absolute;
     bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    width: 100%;
+    text-align: center;
     opacity: 0.7;
     font-size: 0.9rem;
     letter-spacing: 1px;
@@ -279,47 +280,7 @@ h1, h2, h3 {
     opacity: 0.8;
 }
 
-/* Scattered High School Photos (Background of Hero) */
-.scattered-photos {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1; /* Below the hero text */
-    overflow: hidden;
-    pointer-events: none; /* User can click through to play button */
-}
 
-.scattered-photo {
-    position: absolute;
-    width: 220px;
-    background-color: transparent;
-    padding: 0;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
-    border-radius: 8px;
-    overflow: hidden;
-    opacity: 0;
-    filter: sepia(30%) grayscale(60%) contrast(1.1);
-    animation: fadeFloat 4s ease-out forwards;
-}
-
-.scattered-photo img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-@keyframes fadeFloat {
-    0% {
-        opacity: 0;
-        transform: translateY(50px) rotate(0deg);
-    }
-    100% {
-        opacity: 0.25; /* Soft background memory */
-        /* Rotate angle is applied inline via JS */
-    }
-}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -374,10 +335,5 @@ h1, h2, h3 {
     .play-btn {
         font-size: 0.9rem;
         padding: 0.8rem 1.5rem;
-    }
-
-    .scattered-photo {
-        width: 120px;
-        padding: 0;
     }
 }
