@@ -333,19 +333,24 @@ body.is-scrolling .timeline-item:not(:last-child) .text-wrapper {
 
 /* Responsive */
 @media (max-width: 768px) {
+    /* Timeline Container & Items */
     .timeline-container {
-        padding: 2rem 1.5rem;
+        padding: 2rem 1rem;
     }
 
     .timeline-container::before {
         display: none; /* Hide vertical line for perfect centering */
     }
     
+    .timeline-item {
+        margin-bottom: 6rem; /* Mobilde aralıkları biraz daha dengeli yap */
+    }
+    
     .timeline-content, .timeline-content.reverse {
         flex-direction: column;
         align-items: center; /* PERFECT CENTERING */
         text-align: center;
-        gap: 1.5rem;
+        gap: 1.2rem;
         padding-left: 0; /* Remove left offset */
         width: 100%;
     }
@@ -363,26 +368,62 @@ body.is-scrolling .timeline-item:not(:last-child) .text-wrapper {
     .image-wrapper {
         /* On mobile, standard Instagram-like portrait aspect ratio */
         aspect-ratio: 4 / 5;
+        border-radius: 8px; /* Mobilde biraz daha yumuşak köşeler */
     }
 
     .text-wrapper {
-        padding: 1.5rem;
+        padding: 1.2rem;
+        background: rgba(255, 255, 255, 0.05); /* Arka planı mobilde bir tık daha belirgin yapabiliriz */
     }
 
     .text-wrapper h2 {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
     
+    .text-wrapper p {
+        font-size: 0.95rem;
+    }
+
+    /* Hero Section & Dağınık Lise Fotoğrafları */
+    .hero-content {
+        padding: 1.5rem;
+        /* Yazıların okunurluğunu artırmak için hafif gölgeli arka plan */
+        background: radial-gradient(circle, rgba(5,6,8,0.7) 0%, rgba(5,6,8,0) 80%);
+        border-radius: 20px;
+    }
+
     .hero h1 {
         font-size: 2.2rem;
+        text-shadow: 0 4px 15px rgba(0, 0, 0, 1), 0 0 30px rgba(0, 0, 0, 0.8);
     }
     
     .hero .subtitle {
         font-size: 1rem;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 1);
     }
 
     .play-btn {
         font-size: 0.9rem;
-        padding: 0.8rem 1.5rem;
+        padding: 0.8rem 1.2rem;
+        backdrop-filter: blur(5px);
+        background: rgba(0,0,0,0.3); /* Butonu belirginleştir */
     }
+
+    /* Dağınık fotoğrafları mobilde küçült ve karmaşayı azalt */
+    .scatter-img {
+        width: 90px; /* Mobilde çok daha küçük */
+        border-width: 4px;
+        border-bottom-width: 15px;
+        opacity: 0.35; /* Yazıların arkasında kalması için daha şeffaf */
+    }
+
+    /* Mobilde bazılarını gizle veya kenarlara it (Ekranı boğmaması için) */
+    .scatter-img.img1 { top: 5%; left: 2%; }
+    .scatter-img.img2 { top: 80%; left: 5%; }
+    .scatter-img.img3 { top: 8%; right: 2%; }
+    .scatter-img.img4 { top: 75%; right: 5%; }
+    .scatter-img.img5 { display: none; } /* Karmaşayı önlemek için bazılarını gizledik */
+    .scatter-img.img6 { top: 40%; left: -5%; } 
+    .scatter-img.img7 { display: none; }
+    .scatter-img.img8 { top: 45%; right: -5%; }
 }
