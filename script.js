@@ -62,6 +62,31 @@ playBtn.addEventListener('click', () => {
     bgMusic.play().then(() => {
         playBtn.innerHTML = '<span class="icon">♪</span> Ruhumuzun Şarkısı Çalıyor...';
         playBtn.classList.add('playing');
+
+        // 15 saniyede en alta otomatik kaydırma
+        const startY = window.scrollY;
+        const targetY = document.body.scrollHeight - window.innerHeight;
+        const duration = 15000; // 15 saniye
+        let startTime = null;
+        
+        document.body.classList.add('is-scrolling');
+
+        function scrollAnimation(currentTime) {
+            if (startTime === null) startTime = currentTime;
+            const elapsedTime = currentTime - startTime;
+            const progress = Math.min(elapsedTime / duration, 1);
+            
+            window.scrollTo(0, startY + (targetY - startY) * progress);
+
+            if (progress < 1) {
+                requestAnimationFrame(scrollAnimation);
+            } else {
+                // Kaydırma bittiğinde bluru kaldır
+                document.body.classList.remove('is-scrolling');
+            }
+        }
+        
+        requestAnimationFrame(scrollAnimation);
     }).catch(error => {
         console.log("Ses çalınamadı, kullanıcı etkileşimi gerekebilir veya ses dosyası yok:", error);
         alert("Lütfen müzik çalması için 'assets' klasörüne 'music.mp3' adlı veya Billie Eilish '6.18.18' şarkısını ekleyin.");
